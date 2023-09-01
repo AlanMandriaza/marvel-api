@@ -19,13 +19,14 @@ const List = () => {
     }, []);
 
     return (
-        <div>
-            <h1>List</h1>
+        <div className='container row'>
+            <h1>Personajes de Marvel</h1>
             {characters.map(character => (
-                <Card style={{ width: "18rem", marginBottom: "10px" }} key={character.id}>
-                    <CardImg top width="100%" src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
+                <Card style={{ width: "18rem", marginLeft: "30px" }} key={character.id}>
+                    
                     <CardBody>
                         <CardTitle tag="h5">{character.name}</CardTitle>
+                        <CardImg top width="100%" src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
                         <CardText>{character.description} </CardText>
                         <Button>Go somewhere</Button>
                     </CardBody>
