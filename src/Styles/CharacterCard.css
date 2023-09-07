@@ -1,0 +1,11 @@
+.character-container {
+    display: flex;
+    margin: 30px;
+  }
+  
+  .character-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+  
