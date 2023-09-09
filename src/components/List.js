@@ -20,10 +20,11 @@ const List = () => {
           <CardTitle tag="h5">{character.name}</CardTitle>
           <CardImg top src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
           <CardText>
-            <ul>
+            
+          </CardText>
+          <ul>
               {character.events && character.events.items && character.events.items.map(item => <li key={item.name || item.id}>{item.name}</li>)}
             </ul>
-          </CardText>
         </CardBody>
         <CardFooter><Link to={`/character/${character.id}`} className="btn btn-primary">Ir a ficha</Link></CardFooter>
       </Card>
