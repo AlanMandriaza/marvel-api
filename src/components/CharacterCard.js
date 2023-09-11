@@ -25,26 +25,29 @@ const CharacterCard = () => {
 
   return (
     <div className="character-container">
-    <CardImg 
-      className="character-image"
-      src={`${character.thumbnail.path.replace('http', 'https')}.${character.thumbnail.extension}`} 
-      alt={character.name} 
-    />
-
+      <CardImg
+        className="character-image"
+        src={`${character.thumbnail.path.replace('http', 'https')}.${character.thumbnail.extension}`}
+        alt={character.name}
+      />
 
       <div style={{ flex: 1, marginLeft: '20px' }}>
         <h5>{character.name}</h5>
         <CardText>
-          <p>{character.description || "No description available."}</p>
+          <p>{character.description || "No hay descripcion disponible."}</p>
 
           <Dropdown isOpen={seriesOpen} toggle={toggleSeries}>
             <DropdownToggle caret>
               Series
             </DropdownToggle>
             <Collapse isOpen={seriesOpen}>
-              {character.series.items.map((serie, index) => (
-                <li key={index}>{serie.name}</li>
-              ))}
+              {character.series.items.length > 0 ? (
+                character.series.items.map((series, index) => (
+                  <li key={index}>{series.name}</li>
+                ))
+              ) : (
+                <p>No hay series disponibles para este personaje.</p>
+              )}
             </Collapse>
           </Dropdown>
 
@@ -53,9 +56,13 @@ const CharacterCard = () => {
               Comics
             </DropdownToggle>
             <Collapse isOpen={comicsOpen}>
-              {character.comics.items.map((comic, index) => (
-                <li key={index}>{comic.name}</li>
-              ))}
+              {character.comics.items.length > 0 ? (
+                character.comics.items.map((comic, index) => (
+                  <li key={index}>{comic.name}</li>
+                ))
+              ) : (
+                <p>No hay cómics disponibles para este personaje.</p>
+              )}
             </Collapse>
           </Dropdown>
 
@@ -64,9 +71,13 @@ const CharacterCard = () => {
               Events
             </DropdownToggle>
             <Collapse isOpen={eventsOpen}>
-              {character.events.items.map((event, index) => (
-                <li key={index}>{event.name}</li>
-              ))}
+              {character.events.items.length > 0 ? (
+                character.events.items.map((event, index) => (
+                  <li key={index}>{event.name}</li>
+                ))
+              ) : (
+                <p>No hay eventos disponibles para este personaje.</p>
+              )}
             </Collapse>
           </Dropdown>
         </CardText>
