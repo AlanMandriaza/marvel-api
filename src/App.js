@@ -6,7 +6,7 @@ import Navi from "./components/Navbar";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/marvel-api">
       <Navi />
       <Routes>
         <Route path="/" element={<List />} />
