@@ -5,6 +5,7 @@
     gap: 20px;
     background: linear-gradient(to bottom, #2a2a2a, #4a4a4a);
     padding: 20px;
+    color: black;
 }
 
 .card-container {
@@ -14,19 +15,6 @@
     padding: 20px;
 }
 
-.glass {
-    flex: 0 0 calc(20% - 10px); 
-    margin: 5px;
-    padding: 10px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px -6px;
-}
-
-
 .btn {
     margin-bottom: 1px;
 }
@@ -34,9 +22,11 @@
 h1 {
     color: #fff;
 }
+
 .card:hover {
     transform: translateY(-20px);
-  }
-  img {
+}
+
+img {
     border: 1px solid black;  
 }
