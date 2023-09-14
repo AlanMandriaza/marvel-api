@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import List from "./components/List";
 import CharacterCard from "./components/CharacterCard";
 import MyNavbar from "./components/Navbar";
+import ComicList from "./components/ComicList";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<List />} />
         <Route path="/character/:id" element={<CharacterCard />} />
+        <Route path="/comics/" element={<ComicList />} />
       </Routes>
     </Router>
   );

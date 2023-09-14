@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavItem, NavbarToggler, Collapse, NavLink } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import '../Styles/NavBar.css';
 
 function MyNavbar() {
@@ -10,15 +11,15 @@ function MyNavbar() {
   return (
     <div>
       <Navbar className="custom-navbar" light expand="md">
-        <NavbarBrand href="/marvel-api/">Inicio</NavbarBrand>
+        <NavbarBrand tag={Link} to="/">Inicio</NavbarBrand> {/* Using tag={Link} and to instead of href */}
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink tag={Link} to="/components/">Components</NavLink> {/* Using tag={Link} and to instead of href */}
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink tag={Link} to="/comics/">Comics</NavLink> {/* Using tag={Link} and to instead of href */}
             </NavItem>
           </Nav>
         </Collapse>
