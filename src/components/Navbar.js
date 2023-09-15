@@ -11,15 +11,15 @@ function MyNavbar() {
   return (
     <div>
       <Navbar className="custom-navbar" light expand="md">
-        <NavbarBrand tag={Link} to="/">Inicio</NavbarBrand> {/* Using tag={Link} and to instead of href */}
+        <NavbarBrand tag={Link} to="/">Inicio</NavbarBrand> 
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink tag={Link} to="/components/">Components</NavLink> {/* Using tag={Link} and to instead of href */}
+              <NavLink tag={Link} to="/components/">Components</NavLink> 
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/comics/">Comics</NavLink> {/* Using tag={Link} and to instead of href */}
+              <NavLink tag={Link} to="/comics/">Comics</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
