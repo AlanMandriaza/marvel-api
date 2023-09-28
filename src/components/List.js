@@ -30,7 +30,7 @@ const List = () => {
                   ))}
                 </ul>
               </CardBody>
-              <CardFooter><Link to={`/character/${character.id}`} className="btn btn-primary">Ir a ficha</Link></CardFooter>
+              <CardFooter><Link to={`/character/${character.id}`} className="btn btn-primary">Ir a la ficha</Link></CardFooter>
             </Card>
           </div>
         ))}
