@@ -13,7 +13,7 @@ const List = () => {
 
   return (
     <div className='container'>
-      <h1 className="mb-4">Personajes de Marvel</h1>
+      <h1 className="mb-4">Marvel</h1>
       <div className="row card-container">
         {characters.map(character => (
           <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
